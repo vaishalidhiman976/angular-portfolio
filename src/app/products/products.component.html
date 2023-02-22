@@ -1,0 +1,93 @@
+<div class="container bg-light p-5">
+    <div class="d-flex justify-content-between">
+        <h2>Product List</h2>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+           Add New
+          </button>
+    </div>
+    <table class="table table-responsive table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Size</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of productList">
+                <td>{{items.id}}</td>
+                <td>{{items.productName}}</td>
+                <td>{{items.productWeight}}</td>
+                <td>{{items.productCost}}</td>
+                <td>{{items.productExpiryDate}}</td>
+                <td>{{items.productDetails}}</td>
+                <td>
+                    <button (click)="editProduct(items)" type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button>
+                    <button (click)="deleteProduct(items)" type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Modal -->
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="productForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="productName" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" formControlName="productName" id="productName" placeholder="Type Your Product Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="productWeight" class="form-label">Product Weight</label>
+                                <input type="number" class="form-control" formControlName="productWeight" id="productWeight" placeholder="Type Product Weight">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="productCost" class="form-label">Product Cost</label>
+                                <input type="number" class="form-control" formControlName="productCost" id="productCost" placeholder="Type Product Cost">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="productExpiryDate" class="form-label">Product Expiry Date</label>
+                                <input type="date" class="form-control" formControlName="productExpiryDate" id="productExpiryDate" placeholder="Type Product Expiray Date">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="productDetails" class="form-label">Product Details</label>
+                                <textarea class="form-control" formControlName="productDetails" id="productDetails" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="closeForm" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                <button *ngIf="!showUpdate" (click)="addProduct()" type="button" class="btn btn-success">Add</button>
+                <button *ngIf="!showAdd" (click)="updateProduct()" type="button" class="btn btn-success">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

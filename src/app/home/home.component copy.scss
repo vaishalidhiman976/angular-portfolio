@@ -1,0 +1,203 @@
+    section {
+        &.head-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-image: linear-gradient(to bottom (000, 000, 000, 0.5%), (000, 000, 000, 0.25%), (000, 000, 000, 0.50%));
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(top top, #ddd, transparent);
+                z-index: 10;
+            }
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+                z-index: 9;
+                &#frontImg {
+                    z-index: 999;
+                }
+            }
+            #mainText {
+                position: absolute;
+                font-size: 5em;
+                color: green;
+                text-align: center;
+                transform: translateY(550%);
+                z-index: 9;
+            }
+        }
+        .btn {
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 5px 8px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: #000;
+                background-color: #f1f1f1;
+            }
+        }
+        .wrapper {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 300px;
+            .parallax__group {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                transform-style: preserve-3d;
+                .parallax__layer {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    &.sky {
+                        background: url(./../../assets/images/bnr-back-bg.jpg) no-repeat center;
+                        background-size: cover;
+                        transform: translateZ(-600px) scale(3);
+                        z-index: 1;
+                    }
+                    &.bushes {
+                        background: url(./../../assets/images/my-img.png) no-repeat center;
+                        background-size: cover;
+                        transform: translateZ(-525px) scale(2.75);
+                        z-index: 2;
+                    }
+                    // &.water {
+                    //     background: url(./../../assets/images/my-img.png) no-repeat center;
+                    //     background-size: cover;
+                    //     transform: translateZ(-400px) scale(2.3333);
+                    //     z-index: 2;
+                    // }
+                    &.hero-text {
+                        background: linear-gradient( rgba(110, 255, 255, 0.3) 0%, rgba(255, 116, 161, 0.3) 86%, rgba(1, 0, 0, 0.25) 100%, );
+                        background-size: cover;
+                        transform: translateZ(0) scale(1);
+                        z-index: 7;
+                        & h2 {
+                            font-size: 1.25rem;
+                            position: absolute;
+                            top: 2.5rem;
+                            left: 2.5rem;
+                        }
+                        & ul {
+                            font-size: 0.75rem;
+                            position: absolute;
+                            top: 2.5rem;
+                            left: 2.5rem;
+                            & li {
+                                margin-left: 2.5rem;
+                                list-style-type: none;
+                                float: left;
+                                visibility: hidden;
+                                &:nth-of-type(3) {
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+                    .year-container {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 17rem;
+                        height: 25rem;
+                        & h1 {
+                            position: absolute;
+                            font-size: 12rem;
+                            &:nth-of-type(1) {
+                                top: 10%;
+                            }
+                            &:nth-of-type(2) {
+                                left: 30%;
+                                bottom: 0;
+                            }
+                            &:nth-of-type(3) {
+                                top: 0;
+                                right: 30%;
+                            }
+                            &:nth-of-type(4) {
+                                right: 0;
+                                bottom: 20%;
+                            }
+                        }
+                    }
+                    .social-container {
+                        position: absolute;
+                        bottom: 2.5rem;
+                        left: 2.5rem;
+                        &i {
+                            font-size: 1.25rem;
+                            margin-right: 0.25rem;
+                        }
+                    }
+                }
+                &.info-container {
+                    background-color: #000;
+                    transform: translateZ(0) scale(1);
+                    z-index: 8;
+                    display: flex;
+                    flex-direction: column;
+                    justify-items: center;
+                    align-items: center;
+                    text-align: center;
+                    &img {
+                        width: 75%;
+                        margin-bottom: 2.5rem;
+                    }
+                    h2,
+                    p {
+                        margin-bottom: 1rem;
+                    }
+                    &.text-container {
+                        p {
+                            &:nth-of-type(1) {
+                                font-size: 0.75rem;
+                                font-weight: 400;
+                                margin: 1rem 2.5rem;
+                            }
+                            &:nth-of-type(2) {
+                                font-size: 0.6rem;
+                                margin-bottom: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (min-width:760px) {
+        .hero-text {
+            &ul {
+                &li {
+                    visibility: visible;
+                }
+            }
+        }
+        .info-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 3rem;
+            align-items: center;
+            text-align: left;
+            img {
+                justify-self: end;
+                width: 75%;
+            }
+        }
+    }

@@ -1,0 +1,22 @@
+ul:has(.v-footer-nav, li) {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+    background-color: #ddd;
+    color: #2a2a2a;
+    padding: 10px;
+     :hover {
+        border-bottom: 2px solid yellow;
+        cursor: pointer;
+    }
+     :active {
+        border-bottom: 2px solid yellow;
+    }
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

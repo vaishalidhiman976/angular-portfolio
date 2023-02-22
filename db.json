@@ -1,0 +1,305 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "firstName": "Monu",
+      "lastName": "Cutecute",
+      "email": "test@gmail.com",
+      "doj": "2022-01-17",
+      "mobileNum": 6985686863258,
+      "state": "1",
+      "totalPaymentReceived": 585485,
+      "termsAndConditions": true
+    },
+    {
+      "firstName": "Vaishali",
+      "lastName": "Suryavanshi",
+      "email": "test@gmail.com",
+      "doj": "2022-01-17",
+      "mobileNum": 6985686863258,
+      "state": "1",
+      "totalPaymentReceived": 585485,
+      "termsAndConditions": true,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "firstName": "Twinkle",
+      "lastName": "cdfghj",
+      "email": "mark@gmail.com",
+      "doj": "2022-11-01",
+      "mobileNum": 9876542130,
+      "state": "",
+      "totalPaymentReceived": 4568236,
+      "termsAndConditions": ""
+    },
+    {
+      "id": 8,
+      "firstName": "Twinkle",
+      "lastName": "Madaan",
+      "email": "bhindi@yahoo.com",
+      "doj": "2020-06-26",
+      "mobileNum": 96548965632,
+      "state": "1",
+      "totalPaymentReceived": 55555,
+      "termsAndConditions": true
+    },
+    {
+      "firstName": "qqqqqqqqqqq",
+      "lastName": "qqqqqqqq",
+      "email": "mark@gmail.com",
+      "doj": "2022-11-09",
+      "mobileNum": 9999999999,
+      "state": "1",
+      "totalPaymentReceived": 55555555555555,
+      "termsAndConditions": true,
+      "id": 9
+    }
+  ],
+  "signUp": [
+    {
+      "name": "gytyrioh32xjk",
+      "mbNum": "654379126",
+      "email": "tytyu47965admin@weexcel.in",
+      "password": "",
+      "confirmPassword": "",
+      "id": 1
+    },
+    {
+      "name": "Vaishali",
+      "mbNum": "57985165965",
+      "email": "55456admin@weexcel.in",
+      "password": "8888",
+      "confirmPassword": "8888",
+      "id": 2
+    },
+    {
+      "name": "hsyughid",
+      "mbNum": "57982456",
+      "email": "gy89ikjhyudcty@gmail.com",
+      "password": "45451215",
+      "confirmPassword": "45451215",
+      "id": 3
+    },
+    {
+      "name": "Vaishali",
+      "mbNum": "9876543210",
+      "email": "vitahead@gmail.com",
+      "password": "9",
+      "confirmPassword": "9",
+      "id": 4
+    },
+    {
+      "name": "Twinkle",
+      "mbNum": "7896541235",
+      "email": "twinkle@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 5
+    },
+    {
+      "name": "Twinkle test",
+      "mbNum": "012456",
+      "email": "test@weexcel.in",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "id": 6
+    },
+    {
+      "name": "Shubh",
+      "mbNum": "32589657416",
+      "email": "shubh@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 9
+    },
+    {
+      "name": "222",
+      "mbNum": "",
+      "email": "admin@primus.in",
+      "password": "Admin@123",
+      "confirmPassword": "",
+      "id": 13
+    },
+    {
+      "name": "565656",
+      "mbNum": "",
+      "email": "jjkljop",
+      "password": "",
+      "confirmPassword": "",
+      "id": 14
+    },
+    {
+      "name": "test",
+      "mbNum": 987455956548,
+      "email": "xyz@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 15
+    },
+    {
+      "name": "Hehe",
+      "mbNum": 8976541203,
+      "email": "hehe@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 16
+    },
+    {
+      "name": "ghfgil",
+      "mbNum": 6535453,
+      "email": "admin@kljlkjl.in",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 17
+    },
+    {
+      "name": "Vaishali",
+      "mbNum": 9876543210,
+      "email": "anu@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 18
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "kkkkk",
+      "productWeight": 1,
+      "productCost": 22,
+      "productExpiryDate": "2022-11-18",
+      "productDetails": "njjj"
+    },
+    {
+      "id": 5,
+      "productName": "tresdyujkl",
+      "productWeight": 88,
+      "productCost": 888,
+      "productExpiryDate": "2022-11-07",
+      "productDetails": "888"
+    },
+    {
+      "productName": "Jeans",
+      "productWeight": 12,
+      "productCost": 999,
+      "productExpiryDate": "2022-11-02",
+      "productDetails": "Black Jeans",
+      "id": 6
+    },
+    {
+      "productName": "Caneta BIC",
+      "productWeight": 2500.5,
+      "productCost": 1526574,
+      "productExpiryDate": "2022-11-01",
+      "productDetails": "This is a product",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "productName": "Star",
+      "productWeight": 1,
+      "productCost": 7,
+      "productExpiryDate": "2022-11-02",
+      "productDetails": "Golden Color"
+    },
+    {
+      "productName": "a",
+      "productWeight": 8,
+      "productCost": 8,
+      "productExpiryDate": "2022-11-08",
+      "productDetails": "8",
+      "id": 10
+    }
+  ],
+  "about": [
+    {
+      "id": 3,
+      "name": "Vaishali",
+      "email": "vaishali@gmail.com",
+      "price": "789955321",
+      "date": "2022-11-26"
+    },
+    {
+      "id": 5,
+      "name": "test",
+      "email": "admin@primus.in",
+      "price": "5863263",
+      "date": "2022-11-17"
+    },
+    {
+      "id": 6,
+      "name": "test",
+      "email": "admin@primus.in",
+      "price": "5863263",
+      "date": "2022-11-08"
+    },
+    {
+      "name": "sadasd",
+      "email": "admin@primus.in",
+      "price": "5863263",
+      "date": "2022-11-08",
+      "id": 9
+    },
+    {
+      "name": "Dr.45y45ey",
+      "email": "vitahead@gmail.com",
+      "price": "987462523",
+      "date": "2022-11-17",
+      "id": 10
+    },
+    {
+      "name": "Vaishali Dhiman",
+      "email": "vaishali@gmail.com",
+      "price": "789955321",
+      "date": "2022-11-26",
+      "id": 11
+    },
+    {
+      "name": "Gori",
+      "email": "gori@primus.in",
+      "price": "5863263",
+      "date": "2022-11-08",
+      "id": 14
+    },
+    {
+      "name": "test",
+      "email": "bproductionincharge@gmail.com",
+      "price": "9896456",
+      "date": "2022-11-17",
+      "id": 17
+    },
+    {
+      "name": "",
+      "email": "",
+      "price": "",
+      "date": "",
+      "id": 18
+    },
+    {
+      "name": "",
+      "email": "",
+      "price": "",
+      "date": "",
+      "id": 19
+    },
+    {
+      "name": "",
+      "email": "",
+      "price": "",
+      "date": "",
+      "id": 20
+    },
+    {
+      "name": "",
+      "email": "",
+      "price": "",
+      "date": "",
+      "id": 21
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

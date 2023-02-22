@@ -1,0 +1,53 @@
+.v {
+    &-logo-size {
+        width: 3%;
+        height: 60%;
+        &-heading-dark {
+            color: red;
+        }
+    }
+    &-menu-list {
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0;
+            li {
+                color: #000;
+                padding: 0 2px;
+                margin: 10px;
+                font-weight: 700;
+                cursor: pointer;
+                &:hover {
+                    color: #87a5ff;
+                    border-bottom: 2px Solid #87a5ff;
+                    transition: linear 3s ease-in-out;
+                    // animation: linear 3s ease-in-out;
+                }
+                & .NavActive {
+                    color: #87a5ff !important;
+                    text-decoration: underline;
+                }
+            }
+            .offcanvas-body {
+                form {
+                    .input-group {
+                        i {
+                            &.v-password-view-icon {
+                                position: absolute;
+                                right: 5px;
+                                top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.NavActive {
+    color: #87a5ff !important;
+    border-bottom: 3px Solid #87a5ff;
+}

@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Caneta BIC Preta",
+      "productWeight": 2500.5,
+      "productCost": 1526574,
+      "productExpiryDate": "2022-11-01",
+      "productDetails": "This is a product"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

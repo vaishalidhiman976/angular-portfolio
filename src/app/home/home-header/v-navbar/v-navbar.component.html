@@ -1,0 +1,102 @@
+<div class="v-menu-list">
+    <ul>
+        <li routerLink="/" fragment="home" routerLinkActive="NavActive" [routerLinkActiveOptions]="{exact: true}">Home</li>
+        <li routerLink="/" fragment="about">About</li>
+        <li routerLink="/" fragment="services">Services</li>
+        <li routerLink="/" fragment="skills">Skills</li>
+        <li routerLink="/" fragment="portfolio">Portfolio</li>
+        <li routerLink="/" fragment="experience">Experience</li>
+        <li routerLink="/" fragment="education">Education</li>
+        <li routerLink="/" fragment="contact">Contact</li>
+        <!-- <li routerLink="/about" routerLinkActive="NavActive">About</li>
+        <li routerLink="/clients" routerLinkActive="NavActive">Clients</li>
+        <li>Profile</li>
+        <li routerLink="/products">Products</li>
+        <li (click)="open(content1)" *ngIf="showNav" roterLinkActive="NavActive">Sign&nbsp;In</li> -->
+        <!-- <ng-template #content1 let-offcanvas>
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="offcanvas-basic-title" [ngClass]="vHeadingDark">Sign In</h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+            </div>
+            <div class="offcanvas-body py-5">
+                <form [formGroup]="signInForm" (ngSubmit)="loginUser(signInForm)">
+                    <div class="mb-3">
+                        <label class="p-2" for="email">UserName</label>
+                        <div class="input-group" [class.error]="signInForm.controls['email'].dirty && signInForm.hasError('required' , 'email')">
+                            <input id="text" class="form-control" formControlName="email" placeholder="Name" name="email">
+                        </div>
+                        <span class="text-danger" *ngIf="signInForm.controls['email'].untouched && signInForm.hasError('required' , 'email')">Required!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="p-2" for="password">Password</label>
+                        <div class="input-group">
+                            <input type="password" id="password" class="form-control position-relative" formControlName="password" placeholder="Password" name="password">
+                            <span class="border p-2 v-password-view-icon"><i class="far fa-eye"></i></span>
+                        </div>
+                        <span class="text-danger" *ngIf="signInForm.controls['password'].dirty && signInForm.hasError('required' , 'password')">Required!!</span>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" (click)="onSubmit()" class="btn btn-success mt-5" (click)="offcanvas.close('Save click')">Log In</button>
+                        <p> Do not have an account? <a class="text-success" (click)="offcanvas.dismiss('Cross click')" (click)="openEnd(content)">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </ng-template>
+        <li (click)="openEnd(content)"><i class="fa fa-bars"></i></li>
+        <ng-template #content let-offcanvas>
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="offcanvas-basic-title">Create Your Account</h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+            </div>
+            <div class="offcanvas-body py-5">
+                <form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm)">
+                    <div class="mb-3">
+                        <label class="p-2" for="name">Name</label>
+                        <div class="input-group" [class.error]="signUpForm.controls['name'].dirty && signUpForm.hasError('required', 'name')">
+                            <input type="text" id="text" class="form-control" formControlName="name" placeholder="Name" name="name" required>
+                        </div>
+                        <span class="text-danger" *ngIf="signUpForm.controls['name'].dirty && signUpForm.hasError('required', 'name')">Required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="p-2" for="mbNum">Mobile No.</label>
+                        <div class="input-group">
+                            <input type="number" id="number" class="form-control" formControlName="mbNum" placeholder="Mobile Number" name="mbNum" required>
+                        </div>
+                        <span class="text-danger" *ngIf="signUpForm.controls['mbNum'].dirty && signUpForm.hasError('required' , 'mbNum')">Valid Mobile Number is required!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="p-2" for="email">E-mail</label>
+                        <div class="input-group">
+                            <input type="email" id="email" class="form-control" formControlName="email" placeholder="Email" name="email" required>
+                        </div>
+                        <span class="text-danger" *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required', 'email')"> Required!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="p-2" for="password">Create Password</label>
+                        <div class="input-group">
+                            <input type="password" id="password" class="form-control position-relative" formControlName="password" placeholder="Password" name="password" required>
+                            <span class="border p-2 v-password-view-icon"><i class="far fa-eye"></i></span>
+                        </div>
+                        <span class="text-danger" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required', 'password')"> Required!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="p-2" for="confirmPassword">Confirm Password</label>
+                        <div class="input-group">
+                            <input type="password" id="password" class="form-control position-relative" formControlName="confirmPassword" placeholder="Password" name="confirmPassword" required>
+                            <span class="border p-2 v-password-view-icon"><i class="far fa-eye"></i></span>
+                        </div>
+                        <span class="text-danger" *ngIf="signUpForm.controls['confirmPassword'].dirty && signUpForm.hasError('required', 'confirmPassword')"> Required!!</span>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" [disabled]="!signUpForm.valid" class="btn btn-success mt-5" (click)="offcanvas.close('Save click')">Save</button>
+                        <p> Already have an account? <a class="text-success" (click)="offcanvas.dismiss('Cross click')" (click)="open(content1)">Log in</a></p>
+                    </div>
+                </form>
+
+            </div>
+        </ng-template> -->
+        <!-- <li><button type="button" (click)="themeToggle()" class="btn btn-warning d-flex">Color-Theme</button></li> -->
+        <!-- <li><button type="button" (click)="this.document.body.classList.toggle(('menu-open')); this.document.body.localStorage.setItem('','menu-open')" class="btn btn-warning d-flex">Color-Theme</button></li> -->
+        <!-- <li><button type="button" #myDiv (click)="myDiv.classList.toggle('dark')" class="btn btn-warning d-flex">Color-Theme</button></li> -->
+    </ul>
+</div>

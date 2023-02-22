@@ -1,0 +1,94 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-between align-items-center v">
+                <a [routerLink]="['/']"><img src="./../../../assets/images/v-logo.png" alt="v-logo" class="v-logo-size"></a>
+                <app-v-navbar></app-v-navbar>
+                <!-- <div class="v-menu-list">
+                    <ul>
+                        <li routerLink="/" routerLinkActive="Active" [routerLinkActiveOptions]="{exact: true}">Home</li>
+                        <li routerLink="about" routerLinkActive="Active" [routerLinkActiveOptions]="{exact: true}">About</li>
+                        <li>Profile</li>
+                        <li>Products</li>
+                        <li (click)="open(content1)">Sign&nbsp;Up</li>
+                        <ng-template #content1 let-offcanvas>
+                            <div class="offcanvas-header">
+                                <h4 class="offcanvas-title" id="offcanvas-basic-title" [ngClass]="vHeadingDark">Sign Up</h4>
+                                <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+                            </div>
+                            <div class="offcanvas-body py-5">
+                                <form #signInForm="ngForm" (ngSubmit)="loginUser(signInForm)">
+                                    <div class="mb-3">
+                                        <label class="p-2" for="name">UserName</label>
+                                        <div class="input-group">
+                                            <input id="text" class="form-control" placeholder="Name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="p-2" for="password">Password</label>
+                                        <div class="input-group">
+                                            <input id="password" class="form-control position-relative" placeholder="Password" name="password">
+                                            <button class="btn btn-outline-dark v-password-view-icon"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-success mt-5" (click)="offcanvas.close('Save click')">Log In</button>
+                                    <p> Do not have an account? <a class="text-success" (click)="offcanvas.dismiss('Cross click')" (click)="openEnd(content)">Sign Up</a></p>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <li (click)="openEnd(content)"><i class="fa fa-bars"></i></li>
+                        <ng-template #content let-offcanvas>
+                            <div class="offcanvas-header">
+                                <h4 class="offcanvas-title" id="offcanvas-basic-title">Create Your Account</h4>
+                                <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+                            </div>
+                            <div class="offcanvas-body py-5">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="p-2" for="name">Name</label>
+                                        <div class="input-group">
+                                            <input id="text" class="form-control" placeholder="Name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="p-2" for="number">Mobile No.</label>
+                                        <div class="input-group">
+                                            <input id="number" class="form-control" placeholder="Number" name="number">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="p-2" for="email">E-mail</label>
+                                        <div class="input-group">
+                                            <input id="email" class="form-control" placeholder="Email" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="p-2" for="password">Create Password</label>
+                                        <div class="input-group">
+                                            <input id="password" class="form-control position-relative" placeholder="Password" name="password">
+                                            <button class="btn btn-outline-dark v-password-view-icon"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="p-2" for="password">Confirm Password</label>
+                                        <div class="input-group">
+                                            <input id="password" class="form-control position-relative" placeholder="Password" name="password">
+                                            <button class="btn btn-outline-dark v-password-view-icon"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-success mt-5" (click)="offcanvas.close('Save click')">Save</button>
+                                    <p> Already have an account? <a class="text-success" (click)="offcanvas.dismiss('Cross click')" (click)="open(content1)">Log in</a></p>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</header>
+<router-outlet></router-outlet>

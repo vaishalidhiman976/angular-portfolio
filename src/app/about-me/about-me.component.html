@@ -1,0 +1,131 @@
+<app-home-header></app-home-header>
+<!-- <ul>
+    <li *ngFor="let items of [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]">about-me works!</li>
+</ul> -->
+<div class="container bg-light pt-5">
+    <div class="row">
+        <div class="col-12 p-3">
+            <div class="d-flex justify-content-between">
+                <h1>List</h1>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add New
+                </button>
+            </div>
+            <!-- Modal -->
+
+            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form [formGroup]="abtForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" formControlName="name" id="name" placeholder="Type your name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" formControlName="email" id="email" placeholder="Type your email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="price" class="form-label">Price</label>
+                                    <input type="price" class="form-control" formControlName="price" id="price" placeholder="Type price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="date" class="form-label">Date of Manufacturing</label>
+                                    <input type="date" class="form-control" formControlName="date" id="date" placeholder="Select Date">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Price</th>
+                        <th>Date of Manufacturing</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of aboutArray">
+                        <td>{{ data.id }}</td>
+                        <td>{{ data.name }}</td>
+                        <td>{{ data.email }}</td>
+                        <td>{{ data.price }}</td>
+                        <td>{{ data.date }}</td>
+                        <td>
+                            <button (click)="editAbout(data)" type="button" class="btn btn-warning  me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                            <button (click)="deleteThisAbout(data)" type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<app-home-footer></app-home-footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="abtForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Type your name">
+                        <span class="text-danger" *ngIf="abtForm.controls['name'].dirty && abtForm.hasError('required', 'name')">Required!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Type your email">
+                        <span class="text-danger" *ngIf="abtForm.controls['email'].dirty && abtForm.hasError('required', 'email')">Required!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="price" class="form-control" formControlName="price" id="price" placeholder="Type price">
+                        <span class="text-danger" *ngIf="abtForm.controls['price'].dirty && abtForm.hasError('required', 'price')">Required!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date of Manufacturing</label>
+                        <input type="date" class="form-control" formControlName="date" id="date" placeholder="Select Date">
+                        <span class="text-danger" *ngIf="abtForm.controls['date'].dirty && abtForm.hasError('required', 'date')">Required!!</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="closeForm" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button *ngIf="showAddBtn" (click)="addAbout()" type="submit" class="btn btn-primary">Add</button>
+                <button *ngIf="!showAddBtn" (click)="updateAbout()" type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let jm = document.getElementsByTagName
+</script>

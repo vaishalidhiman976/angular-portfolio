@@ -1,0 +1,9 @@
+::ng-deep {
+     :is(.modal-backdrop) {
+        display: none !important;
+    }
+    .modal {
+        /* bug fix - custom overlay */
+        background-color: rgba(10, 10, 10, 0.45);
+    }
+}
