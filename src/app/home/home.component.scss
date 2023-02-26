@@ -131,6 +131,10 @@
                     min-height: 330px;
                     overflow-y: auto;
                     z-index: 1;
+                    @include responsive(max,
+                    800px) {
+                        width: 100%;
+                    }
                     .carousel-indicators {
                         bottom: -36px;
                     }
@@ -140,6 +144,10 @@
                     vertical-align: middle;
                     transform: translateY(15%);
                     z-index: 2;
+                    @include responsive(max,
+                    800px) {
+                        margin-left: 0;
+                    }
                 }
                 &project-detail-con {
                     background-color: #282828;
@@ -161,6 +169,10 @@
                     min-height: 330px;
                     overflow-y: auto;
                     z-index: 1;
+                    @include responsive(max,
+                    800px) {
+                        width: 100%;
+                    }
                     .carousel-indicators {
                         bottom: -36px;
                     }
@@ -171,6 +183,10 @@
                     transform: translateY(15%);
                     z-index: 2;
                     position: relative;
+                    @include responsive(max,
+                    800px) {
+                        margin-left: 0;
+                    }
                 }
                 &project-detail-con {
                     background-color: #282828;
